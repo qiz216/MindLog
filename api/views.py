@@ -119,7 +119,7 @@ class TwilioAPI(APIView):
             wit_attr = wit.get_attributes()
             Message.objects.create(
                 owner=user,
-                title='phone text',
+                name='phone text',
                 message=data['Body'],
                 twilio_msg_sid=data['MessageSid'],
                 tag=wit_attr['tag'],
